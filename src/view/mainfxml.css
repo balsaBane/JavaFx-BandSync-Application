@@ -1,0 +1,15 @@
+
+
+.mainFxmlClass {
+
+}
+#pane{
+    -fx-background-image: url("/img/texture.png");
+    -fx-background-repeat: repeat;    
+    -fx-background-size: 20 20;
+    -fx-background-position: left;   
+}
+
+     
+     
+ 

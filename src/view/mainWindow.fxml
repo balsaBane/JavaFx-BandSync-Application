@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+ 
+<AnchorPane id="pane" fx:id="ancPane" prefHeight="768.0" prefWidth="1366.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainWindowController">
+    <stylesheets>
+        <URL value="@mainfxml.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="320.0" prefHeight="55.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar layoutY="-3.0" prefHeight="30.0" prefWidth="1366.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="logOut" mnemonicParsing="false" text="Log out..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem fx:id="close" mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="about" mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+            </MenuBar>
+         </children>
+      </Pane> 
+      <Pane fx:id="contentPane" layoutX="179.0" layoutY="88.0" prefHeight="666.0" prefWidth="1000.0" />
+      <ImageView fx:id="logo" fitHeight="105.0" fitWidth="456.0" layoutX="187.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+                        <Image url="img/logoMain.png" />
+                     </image>
+                  </ImageView>
+   </children>
+</AnchorPane>

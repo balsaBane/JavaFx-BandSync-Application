@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="pane" fx:id="ancPane" prefHeight="768.0" prefWidth="1366.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StatsController">
+    <stylesheets>
+        <URL value="@mainfxml.css" />
+    </stylesheets>
+   <children>
+      <Pane layoutX="320.0" prefHeight="55.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar layoutY="-3.0" prefHeight="30.0" prefWidth="1366.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="logOut" mnemonicParsing="false" text="Log out..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem fx:id="close" mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="about" mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+            </MenuBar>
+         </children>
+      </Pane> 
+      <ImageView fx:id="logo" fitHeight="105.0" fitWidth="456.0" layoutX="410.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+              <Image url="img/logoMain.png" />
+          </image>
+      </ImageView>
+      <ImageView fx:id="backView" fitHeight="40.0" fitWidth="40.0" layoutX="22.0" layoutY="106.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+          <image>
+              <Image url="img/back.png" />
+          </image>
+      </ImageView>
+      <PieChart fx:id="pie" layoutX="203.0" layoutY="184.0" prefHeight="400.0" prefWidth="402.0" />
+      <ImageView fx:id="underConst" fitHeight="125.0" fitWidth="125.0" layoutX="798.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

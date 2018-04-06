@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="ancPane" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditorController">
+     
+    <children>
+       
+              <Pane fx:id="pane" layoutX="100.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1189.0">
+                  <children>
+                      <TextArea fx:id="chordsField" layoutX="212.0" layoutY="7.0" prefHeight="665.0" prefWidth="764.0" wrapText="true">
+                          <font>
+                              <Font name="Courier New" size="16.0" />
+                          </font>
+                      </TextArea>
+                      <VBox prefHeight="536.0" prefWidth="165.0" spacing="15.0">
+                          <children>
+                              <Label prefHeight="29.0" prefWidth="74.0" text="Artist:">
+                                  <font>
+                                      <Font size="16.0" />
+                                  </font>
+                              </Label>
+                              <TextField fx:id="artistField" prefHeight="25.0" prefWidth="163.0" />
+                        <Label prefHeight="25.0" prefWidth="100.0" text="Song name:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                              <TextField fx:id="songNameField" prefHeight="25.0" prefWidth="163.0" />
+                              <Label prefHeight="25.0" prefWidth="74.0" text="Tempo:">
+                                  <font>
+                                      <Font size="16.0" />
+                                  </font>
+                              </Label>
+                              <TextField fx:id="tempoField" prefHeight="15.0" prefWidth="55.0" />
+                              <Label prefHeight="25.0" prefWidth="74.0" text="Youtube:">
+                                  <font>
+                                      <Font size="16.0" />
+                                  </font>
+                              </Label>
+                              <TextField fx:id="youtubeField" prefHeight="15.0" prefWidth="55.0" />
+                              <RadioButton fx:id="radio1" mnemonicParsing="false" text="Domestic" />
+                              <RadioButton fx:id="radio2" mnemonicParsing="false" prefHeight="17.0" prefWidth="71.0" text="Foreign" />
+                              <Separator prefWidth="200.0" />
+                              <RadioButton fx:id="radio3" mnemonicParsing="false" text="Slow" />
+                              <RadioButton fx:id="radio4" mnemonicParsing="false" text="Medium" />
+                              <RadioButton fx:id="radio5" mnemonicParsing="false" text="Fast" />
+                              <Separator prefWidth="200.0" />
+                              <Button fx:id="saveButton" mnemonicParsing="false" onMouseClicked="#MouseClicked" onMouseReleased="#MouseReleased" prefHeight="25.0" prefWidth="64.0" text="Save" />
+                              <ImageView fitHeight="46.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="img/logoMain.png" />
+                                  </image>
+                              </ImageView>
+                          </children>
+                      </VBox>
+                  <VBox layoutX="992.0" layoutY="7.0" prefHeight="200.0" prefWidth="183.0" spacing="10.0">
+                     <children>
+                          <Label text="Font size :">
+                              <font>
+                                  <Font size="17.0" />
+                              </font>
+                          </Label>
+                          <TextField fx:id="fontSizeField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="33.0" />
+                          <Slider fx:id="slider" prefHeight="14.0" prefWidth="165.0" />
+                     </children>
+                  </VBox>
+                  </children>
+              </Pane> 
+        <ImageView fx:id="backView" fitHeight="40.0" fitWidth="40.0" layoutX="21.0" layoutY="49.0" onMousePressed="#MouseClicked" onMouseReleased="#MouseReleased" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="img/back.png" />
+            </image>
+        </ImageView>
+        <MenuBar layoutX="6.0" layoutY="1.0" prefHeight="30.0" prefWidth="1366.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="about" mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar> 
+    </children>
+</AnchorPane>

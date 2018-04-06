@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="AncPane" prefHeight="410.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.IntroController">
+    <children> 
+        <StackPane layoutY="-1.0" prefHeight="408.0" prefWidth="510.0">
+            <children>
+                <ImageView fitHeight="410.0" fitWidth="510.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/introBackground.jpg" />
+                    </image> 
+                </ImageView>
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <ImageView fx:id="logoView" fitHeight="105.0" fitWidth="456.0" layoutX="30.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="img/logo.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+        <Pane layoutX="15.0" layoutY="126.0" prefHeight="267.0" prefWidth="483.0">
+            <children>
+                <TableView fx:id="table" editable="true" layoutX="80.0" layoutY="40.0" prefHeight="196.0" prefWidth="200.0">
+                    <placeholder>
+                        <Label text="No bands registred" />
+                    </placeholder> 
+                </TableView>
+                <VBox layoutX="303.0" layoutY="61.0" prefHeight="175.0" prefWidth="157.0" spacing="23.0">
+                    <children>
+                        <ImageView fx:id="loadButton" fitHeight="26.0" fitWidth="101.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="img/load.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="editButton" fitHeight="26.0" fitWidth="101.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="img/edit.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="deleteButton" fitHeight="26.0" fitWidth="101.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="img/delete.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="makeNewButton" fitHeight="26.0" fitWidth="101.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="img/makeNew.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

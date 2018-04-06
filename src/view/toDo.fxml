@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="pane" fx:id="ancPane" prefHeight="768.0" prefWidth="1366.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ToDoController">
+    
+    <children>
+        <Pane layoutX="320.0" prefHeight="55.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <MenuBar layoutY="-3.0" prefHeight="30.0" prefWidth="1366.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem fx:id="about" mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                    <padding>
+                        <Insets top="3.0" />
+                    </padding>
+                </MenuBar>
+            </children>
+        </Pane>
+        
+        <Pane fx:id="pane" layoutX="178.0" layoutY="38.0" prefHeight="716.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+           <children>
+               <TableView fx:id="tabela3" layoutX="157.0" layoutY="186.0" prefHeight="446.0" prefWidth="595.0">
+                   <columns>
+                       <TableColumn fx:id="songNameCol" prefWidth="150.0" text="Song name" />
+                       <TableColumn fx:id="artistCol" minWidth="0.0" prefWidth="150.0" text="Artist" /> 
+                       <TableColumn fx:id="youtubeCol" prefWidth="294.0" text="Youtube link" />   
+                   </columns>
+               </TableView>
+           
+               <Label layoutX="157.0" layoutY="113.0" text="Song name :" />
+               <TextField fx:id="songNameField" layoutX="237.0" layoutY="109.0" prefHeight="25.0" prefWidth="213.0" />
+               <Label layoutX="461.0" layoutY="113.0" text="Artist:" />
+               <TextField fx:id="artistField" layoutX="527.0" layoutY="109.0" prefHeight="25.0" prefWidth="225.0" />
+               <Label layoutX="157.0" layoutY="151.0" prefHeight="17.0" prefWidth="66.0" text="Youtube link:" />
+               <TextField fx:id="youtubeField" layoutX="237.0" layoutY="147.0" prefHeight="25.0" prefWidth="213.0" />
+               <ImageView fx:id="pasteView" fitHeight="30.0" fitWidth="30.0" layoutX="460.0" layoutY="142.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                       <Image url="img/paste.png" />
+                   </image>
+               </ImageView>
+               <ImageView fx:id="addView" fitHeight="30.0" fitWidth="110.0" layoutX="638.0" layoutY="145.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                       <Image url="img/addSuggestion.png" />
+                   </image>
+               </ImageView>
+               <HBox layoutX="562.0" layoutY="647.0" prefHeight="30.0" prefWidth="177.0" spacing="10.0">
+                   <children>
+                       <ImageView fx:id="up" fitHeight="30.0" fitWidth="30.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                               <Image url="img/up.png" />
+                           </image>
+                       </ImageView>
+                       <ImageView fx:id="down" fitHeight="30.0" fitWidth="30.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true"> 
+                           <image>
+                               <Image url="img/down.png" />
+                           </image>
+                       </ImageView>
+                       <ImageView fx:id="deleteSongView" fitHeight="30.0" fitWidth="110.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                               <Image url="img/deleteSong.png" />
+                           </image>
+                       </ImageView>
+                   </children>
+               </HBox>
+               <ImageView fx:id="doItView" fitHeight="30.0" fitWidth="110.0" layoutX="157.0" layoutY="647.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                       <Image url="img/doIt.png" />
+                   </image>
+               </ImageView>
+               <ImageView fx:id="watchView" fitHeight="30.0" fitWidth="110.0" layoutX="273.0" layoutY="647.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                       <Image url="img/watch.png" />
+                   </image>
+               </ImageView>
+           </children>
+            
+            
+        </Pane>
+        <ImageView fx:id="backView" fitHeight="40.0" fitWidth="40.0" layoutX="22.0" layoutY="106.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="img/back.png" />
+            </image>
+        </ImageView>
+         <ImageView fx:id="logo" fitHeight="105.0" fitWidth="456.0" layoutX="72.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+                 <Image url="img/logoMain.png" />
+             </image>
+         </ImageView>
+        
+        
+        
+    </children>
+</AnchorPane>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="pane" fx:id="ancPane" prefHeight="768.0" prefWidth="1366.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SongbookController">
+    <children>
+        <Pane layoutX="320.0" prefHeight="55.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <MenuBar fx:id="menu" layoutY="-3.0" prefHeight="30.0" prefWidth="1366.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem fx:id="about" mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                    <padding>
+                        <Insets top="3.0" />
+                    </padding>
+                </MenuBar>
+            </children>
+        </Pane>
+       
+        <Pane fx:id="contentPane" layoutX="178.0" layoutY="38.0" prefHeight="716.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+            <children>
+                <TextField fx:id="searchField" layoutX="218.0" layoutY="132.0" onAction="#onEnter" prefHeight="25.0" prefWidth="509.0" />
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="185.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="img/search.png" />
+                    </image>
+                </ImageView>
+                <HBox layoutX="314.0" layoutY="181.0" prefHeight="30.0" prefWidth="330.0" spacing="3.0">
+                    <children>
+                        <ImageView fx:id="recentView" fitHeight="30.0" fitWidth="110.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="img/recent.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="allFilesView" fitHeight="30.0" fitWidth="110.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="img/allFiles.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="categoriesView" fitHeight="30.0" fitWidth="110.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="img/categories.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <TableView fx:id="tabela" layoutX="112.0" layoutY="216.0" prefHeight="417.0" prefWidth="734.0">
+                    <columns>
+                        
+                        <TableColumn fx:id="songNameCol" prefWidth="146.0" text="Song Name" />
+                        <TableColumn fx:id="artistCol" prefWidth="146.0" text="Artist" />
+                        <TableColumn fx:id="tempoCol" minWidth="0.0" prefWidth="51.0" text="Tempo" />
+                        <TableColumn fx:id="categoryCol" prefWidth="67.0" text="Category" />
+                        <TableColumn fx:id="dateCreatedCol" prefWidth="123.0" text="Date added" />
+                        <TableColumn fx:id="lastModifiedCol" minWidth="0.0" prefWidth="120.0" text="Last modified" />
+                        <TableColumn fx:id="domForCol" minWidth="0.0" prefWidth="78.0" text="Dom/For" />
+                    </columns>
+                </TableView>
+                <ImageView fx:id="editSongView" fitHeight="30.0" fitWidth="110.0" layoutX="618.0" layoutY="645.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="img/editSong.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="deleteSongView" fitHeight="30.0" fitWidth="110.0" layoutX="738.0" layoutY="645.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="img/deleteSong.png" />
+                    </image>
+                </ImageView>
+                  <ImageView fx:id="updateView" fitHeight="40.0" fitWidth="40.0" layoutX="112.0" layoutY="166.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="img/rotation.png" />
+                      </image>
+                  </ImageView>
+            <ImageView fx:id="connectionView" fitHeight="25.0" fitWidth="25.0" layoutX="95.0" layoutY="648.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="img/connOk.png" />
+            </image>
+        </ImageView>
+            <Label fx:id="connectionLabel" layoutX="122.0" layoutY="652.0" prefHeight="17.0" prefWidth="67.0" text="Connection:" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <Label fx:id="statusLabel" layoutX="183.0" layoutY="653.0" text="Ok" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <HBox fx:id="categoryHbox" layoutX="654.0" layoutY="186.0" prefHeight="30.0" prefWidth="237.0" spacing="4.0">
+               <children>
+                  <Button fx:id="slow" mnemonicParsing="false" onMouseClicked="#mouseClicked" onMouseReleased="#mouseReleased" prefHeight="25.0" prefWidth="67.0" text="Slow" />
+                  <Button fx:id="medium" mnemonicParsing="false" onMouseClicked="#mouseClicked" onMouseReleased="#mouseReleased" prefHeight="25.0" prefWidth="67.0" text="Medium" />
+                  <Button fx:id="fast" mnemonicParsing="false" onMouseClicked="#mouseClicked" onMouseReleased="#mouseReleased" prefHeight="25.0" prefWidth="67.0" text="Fast" />
+               </children></HBox>
+            <ImageView fx:id="searchButtonView" fitHeight="25.0" fitWidth="92.0" layoutX="727.0" layoutY="132.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="img/searchButton.png" />
+            </image>
+        </ImageView>
+            </children>
+        </Pane>
+        <ImageView fx:id="backView" fitHeight="40.0" fitWidth="40.0" layoutX="22.0" layoutY="106.0" onMousePressed="#mouseClicked" onMouseReleased="#mouseReleased" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="img/back.png" />
+            </image>
+        </ImageView>       
+       
+        <ImageView fx:id="logo" fitHeight="105.0" fitWidth="456.0" layoutX="85.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="img/logoMain.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
