@@ -1,6 +1,6 @@
 # BandSync application
 
-Welcome to the application for synchronizing the materials used by a band with using an online database. 
+Welcome to the application for synchronizing the materials used by a band. Each band member has his own instance of the program, and the software connects to an online database.
 
 ![alt text](https://raw.githubusercontent.com/balsaBane/JavaFx-BandSync-Application/master/src/img/screenshot.png)
 
