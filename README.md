@@ -2,7 +2,7 @@
 
 Welcome to the application for synchronizing the materials used by a band. 
 
-![alt text](JavaFx-BandSync-Application/src/img/screenshot.png)
+![alt text](https://raw.githubusercontent.com/balsaBane/JavaFx-BandSync-Application/master/src/img/screenshot.png)
 
 # Getting Started
 
