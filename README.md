@@ -4,15 +4,15 @@
 
 Welcome to the application for synchronizing the materials used by a band. 
 
-## Getting Started
+# Getting Started
 
 Clone repository into your NetBeans IDE, open the controllers package and run the BandSync.java class
 
-### Installing
+# Installing
 
 If you want to install and test the app, download the .exe setup file below and install as a regular application:
 
-## Built With
+# Built With
 
 * [JavaFx] - Gui framework
 * [FXML]   - JavaFx version of xml
