@@ -1,6 +1,6 @@
 # BandSync application
 
-Welcome to the application for synchronizing the materials used by a band. 
+Welcome to the application for synchronizing the materials used by a band with using an online database. 
 
 ![alt text](https://raw.githubusercontent.com/balsaBane/JavaFx-BandSync-Application/master/src/img/screenshot.png)
 
