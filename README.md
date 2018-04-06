@@ -6,7 +6,7 @@ Welcome to the application for synchronizing the materials used by a band.
 
 # Getting Started
 
-Clone repository into your NetBeans IDE, open the controllers package and run the BandSync.java class
+Clone repository into your NetBeans IDE, open the controllers package and run the BandSync.java class.
 
 # Installing
 
